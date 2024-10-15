@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
 
   const pathName = usePathname();
-  const hideNavAndFooter = pathName === '/login' || pathName === '/register' || pathName === '/dashboard';
+  const hideNavAndFooter = pathName === '/login' || pathName === '/register' || pathName === '/dashboard' || pathName === '/dashboard/manage-users';
   return (
     <html lang="en" data-theme="light">
       <head>
@@ -35,7 +35,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-screen-2xl mx-auto`}
       >
-
         {!hideNavAndFooter && <Navbar />}
         {children}
         {!hideNavAndFooter && <Footer />}
